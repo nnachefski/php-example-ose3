@@ -4,18 +4,17 @@ This is an example PHP application you can use to test your OSEv3 environment.
 
 Here is an example:
 ```
-user@host$ osc new-app -l name=php-example -i openshift/php https://github.com/christianh814/php-example-ose3 
+user@host$ osc new-app --build=openshift/php https://github.com/christianh814/php-example-ose3
 ```
 
 Things to keep in mind:
 * `ose new-app` Creates a new application on OSE3
-* `-l name=php-example` This labels the application as "php-example"
-* `-i openshift/php` This tells OSEv3 to use the PHP image stream provided by OSE (could easily be an external registry)
+* `--build=openshift/php` This tells OSEv3 to use the PHP builder provided by OSE
 * Provide the git URL for the project
 
-Once you created the app, start your build (reference it by label):
+Once you created the app, start your build
 ```
-user@host$ osc start-build php-example
+user@host$ osc start-build php-example-ose3
 ```
 
 Once the build completes; create and add your route:
@@ -30,7 +29,7 @@ user@host$ cat php-route.json
   "spec": {
     "host": "php-example.cloudapps.example.com",
     "to": {
-      "name": "php-example"
+      "name": "php-example-ose3"
     }
   }
 }
