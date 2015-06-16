@@ -4,13 +4,30 @@ This is an example PHP application you can use to test your OSEv3 environment.
 
 Here is an example:
 ```
-user@host$ osc new-app --build=openshift/php https://github.com/christianh814/php-example-ose3
+user@host$ osc new-app openshift/php~https://github.com/christianh814/php-example-ose3
 ```
 
 Things to keep in mind:
 * `ose new-app` Creates a new application on OSE3
-* `--build=openshift/php` This tells OSEv3 to use the PHP builder provided by OSE
+* `openshift/php` This tells OSEv3 to use the PHP image stream provided by OSE
 * Provide the git URL for the project
+  * Syntax is "imagestreat~souce"
+
+NOTE: Current [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1232003) has you manually update the `BuildConfig` to add the "openshift" namespace:
+
+```
+user@host$ ose edit bc/php-example-ose3
+```
+
+File should have something like this
+```
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: php:latest
+        **namespace: openshift**
+```
 
 Once you created the app, start your build
 ```
