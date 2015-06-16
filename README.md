@@ -11,7 +11,7 @@ Things to keep in mind:
 * `ose new-app` Creates a new application on OSE3
 * `openshift/php` This tells OSEv3 to use the PHP image stream provided by OSE
 * Provide the git URL for the project
-  * Syntax is "imagestreat~souce"
+  * Syntax is "imagestream~souce"
 
 >
 >NOTE: Current [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1232003) has you manually update the `BuildConfig` to add the "namespace: openshift"
