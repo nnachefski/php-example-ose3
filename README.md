@@ -21,13 +21,13 @@ Things to keep in mind:
 >```
 >
 >File should have something like this
->```
-  >strategy:
-    >sourceStrategy:
-      >from:
-        >kind: ImageStreamTag
-        >name: php:latest
-        >namespace: openshift
+```
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: php:latest
+        namespace: openshift
 >```
 
 Once you created the app, start your build
