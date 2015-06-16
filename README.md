@@ -13,7 +13,7 @@ Things to keep in mind:
 * Provide the git URL for the project
   * Syntax is "imagestreat~souce"
 
-NOTE: Current [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1232003) has you manually update the `BuildConfig` to add the "openshift" namespace:
+NOTE: Current [bug](https://bugzilla.redhat.com/show_bug.cgi?id=1232003) has you manually update the `BuildConfig` to add the "namespace: openshift"
 
 ```
 user@host$ ose edit bc/php-example-ose3
@@ -26,7 +26,7 @@ File should have something like this
       from:
         kind: ImageStreamTag
         name: php:latest
-        **namespace: openshift**
+        namespace: openshift
 ```
 
 Once you created the app, start your build
