@@ -54,3 +54,7 @@ user@host$ osc php-route.json
 ```
 
 OSEv3 Is still in beta. Please consult the [documentation](https://github.com/openshift/training)
+
+## NOTE:
+
+Make sure the namespace you're working on has [quotas](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-quota-to-projects) and a [limit](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-limit-ranges-to-projects) set
