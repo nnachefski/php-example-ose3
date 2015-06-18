@@ -64,7 +64,7 @@ File should have something like this
         namespace: openshift
 ```
 
-Once you do this you can start the build.
+Once you do this you can start the build. 
 
 ### Scaling
 
