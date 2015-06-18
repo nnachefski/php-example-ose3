@@ -15,7 +15,8 @@ Things to keep in mind:
 * Provide the git URL for the project
   * Syntax is "imagestream~souce"
 
-Once you created the app, start your build
+Once you created the app, start your build (before you start your build make sure you read [this](https://github.com/christianh814/php-example-ose3/blob/master/README.md#command-line-building))
+
 ```
 user@host$ osc start-build php-example-ose3
 ```
