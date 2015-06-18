@@ -63,6 +63,9 @@ File should have something like this
         name: php:latest
         namespace: openshift
 ```
+
+Once you do this you can start the build.
+
 ### Scaling
 
 If you want to scale this app you need to perform these steps [explained here](https://github.com/openshift/training/blob/master/beta-4-setup.md#implications-of-quota-enforcement-on-scaling) because of a bug.
