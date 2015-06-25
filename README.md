@@ -6,7 +6,7 @@ This is an example PHP application you can use to test your OSEv3 environment.
 
 Here is an example:
 ```
-user@host$ osc new-app openshift/php~https://github.com/christianh814/php-example-ose3
+user@host$ oc new-app openshift/php~https://github.com/christianh814/php-example-ose3
 ```
 
 Things to keep in mind:
@@ -18,7 +18,7 @@ Things to keep in mind:
 Once you created the app, start your build (before you start your build make sure you read [this](https://github.com/christianh814/php-example-ose3/blob/master/README.md#command-line-building))
 
 ```
-user@host$ osc start-build php-example-ose3
+user@host$ oc start-build php-example-ose3
 ```
 
 Once the build completes; create and add your route:
