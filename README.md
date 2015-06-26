@@ -35,7 +35,7 @@ If you'd like to add another route (aka "alias"); then you need to specify a new
 
 ```
 user@host$ oc expose service php-example-ose3 --name=hello-openshift --hostname=hello-openshift.cloudapps.example.com
-``
+```
 
 ## NOTE:
 
