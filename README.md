@@ -31,7 +31,13 @@ Scale up as you wish
 user@host$ oc scale --replicas=3 dc/php-example-ose3
 ```
 
+If you'd like to add another route (aka "alias"); then you need to specify a new name for it
+
+```
+user@host$ oc expose service php-example-ose3 --name=hello-openshift --hostname=hello-openshift.cloudapps.example.com
+``
+
 ## NOTE:
 
 ### Project Namespace
-Make sure the namespace you're working on has [quotas](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-quota-to-projects) and a [limit](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-limit-ranges-to-projects) set
+Make sure the namespace you're working on has [quotas](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-quota-to-projects) and a [limit](https://github.com/openshift/training/blob/master/beta-4-setup.md#applying-limit-ranges-to-projects) BOTH set (you can have none or both...but not one or the other)
