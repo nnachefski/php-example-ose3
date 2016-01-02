@@ -18,17 +18,17 @@ Things to keep in mind:
 Once you created the app, start your build
 
 ```
-user@host$ oc start-build php-example-ose3
+user@host$ oc start-build phpinfo
 ```
 
 Once the build completes; create and add your route:
 ```
-user@host$ oc expose service php-example-ose3 --hostname=php-example.cloudapps.example.com
+user@host$ oc expose service phpinfo --hostname=php-example.cloudapps.example.com
 ```
 
 Scale up as you wish
 ```
-user@host$ oc scale --replicas=3 dc/php-example-ose3
+user@host$ oc scale --replicas=3 dc/phpinfo
 ```
 
 If you'd like to add another route (aka "alias"); then you need to specify a new name for it
