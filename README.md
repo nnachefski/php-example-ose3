@@ -6,7 +6,7 @@ This is an example PHP application you can use to test your OSEv3 environment.
 
 Here is an example:
 ```
-user@host$ oc new-app openshift/php~https://github.com/christianh814/php-example-ose3
+user@host$ oc new-app openshift/php~https://github.com/nnachefski/phpinfo
 ```
 
 Things to keep in mind:
